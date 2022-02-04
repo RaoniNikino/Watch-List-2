@@ -2,5 +2,12 @@
 <h1>List detail</h1>
 <%= @list.name %><br>
 <br>
-<%= link_to "back", lists_path, class: "btn btn-secondary" %>
+<h1>Bookmarks</h1>
+<ul>
+<% @bookmarks.each do |bookmark|%>
+<li><h4><%= bookmark.comment %></h4> <p>Movie: <%= bookmark.movie.title %></p> <%= link_to "delete", bookmark_path(bookmark), method: :delete %><br><br></li>
+<% end %>
+</ul>
+<br>
+<%= link_to "Create a bookmark", new_list_bookmark_path(@list), class: "btn btn-primary" %> <%= link_to "back", root_path, class: "btn btn-secondary" %>
 </div>
