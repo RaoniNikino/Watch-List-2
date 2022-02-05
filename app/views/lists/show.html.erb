@@ -1,6 +1,7 @@
 <div class="container">
-<h1>List detail</h1>
-<%= @list.name %><br>
+<h1><%= @list.name %> List</h1>
+<span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque quae doloremque unde odio, nesciunt veritatis repudiandae aut. Repudiandae voluptates tempora eligendi optio, error distinctio accusamus. Impedit, deserunt pariatur velit sequi porro harum vitae commodi odit sint culpa omnis quaerat doloribus facere molestiae doloremque, quam ex fugiat? Fugit tempora eos est?</span>
+<br>
 <br>
 <h1>Bookmarks</h1>
 <ul>
@@ -8,6 +9,5 @@
 <li><h4><%= bookmark.comment %></h4> <p>Movie: <%= bookmark.movie.title %></p> <%= link_to "delete", bookmark_path(bookmark), method: :delete %><br><br></li>
 <% end %>
 </ul>
-<br>
 <%= link_to "Create a bookmark", new_list_bookmark_path(@list), class: "btn btn-primary" %> <%= link_to "back", root_path, class: "btn btn-secondary" %>
 </div>
